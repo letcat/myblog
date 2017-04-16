@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="/static/css/blog.css">
+    <script  src="/static/js/bootstrap.min.js"></script>
+
+</head>
+
+        <body>
+
+        <ul class="nav nav-tabs">
+            <!--
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            -->
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/time.html">Profile</a></li>
+            <li role="presentation"><a href="/addBlog.html">Messages</a></li>
+        </ul>
+
+        <form role="form" action="/search" method="post">
+               <div class="col-lg-2 search">
+               <div class="input-group">
+                   <input type="text" class="form-control" id="search" name="search">
+                   <span class="input-group-btn">
+                       <button class="btn btn-default" type="submit">search</button>
+                   </span>
+               </div>
+               </div>
+        </form>
+
+        <div class="listBlogs">
+            {% for blog in blogs %}
+                <li class="list-unstyled">
+                    <div class="blogTitle">{{ blog[1] }}</div>
+                    <div class="blogText"> {{ blog[2] }}  <a href="/viewBlog/{{blog[0]}}">&nbsp;more</a></div>
+                    <h6 class="blogTime"> {{ blog[5].split(" ")[0] }}</h6>
+                </li>
+            {% endfor %}
+
+        </div>
+
+        <nav class="blogPage">
+            <ul class="pagination">
+                <li><a href="/index/{{page-1 if page>1 else page}}">&laquo;</a></li>
+                {% for i in range(1,3) %}
+                <li><a href="/index/{{i}}">{{i}}</a></li>
+                {% endfor %}
+                <li><a href="/index/{{page+1}}">&raquo;</a></li>
+            </ul>
+        </nav>
+        </body>
+</html>

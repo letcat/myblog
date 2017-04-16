@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="/static/css/blog.css">
+    <script  src="/static/js/bootstrap.min.js"></script>
+
+</head>
+        <body>
+
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation" class="active"><a href="#">Messages</a></li>
+        </ul>
+            <div id="addBlog">
+                <form action="/saveBlog" method="post">
+
+                    Title
+                    <input type="text" id="title" name="title" class="form-control" >
+                    Summary
+                    <input type="text" id="summary" name="summary" class="form-control" >
+                    Content
+                    <textarea id="content" name="content" class="form-control" cols="8" rows="25" cols="20"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-default">submit</button>
+
+                </form>
+            </div>
+        </body>
+</html>

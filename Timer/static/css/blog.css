@@ -1,0 +1,52 @@
+body{
+    font: 13px/21px "Microsoft YaHei", 'Myriad Pro','Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.search{
+    position:relative;
+    top:10px;
+    left:1000px;
+}
+
+#addBlog{
+    position:absolute;
+    left:20%;
+    top:100px;
+    width:800px;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, Palatino, serif;
+  }
+
+.listBlogs{
+    position:relative;
+    top:40px;
+    left:300px;
+}
+
+.listBlogs li{
+    margin:35px;
+}
+
+.blogTitle{
+    font-size:20px;
+}
+
+.blogText{
+    word-spacing:2px;
+    letter-spacing:2px;
+    margin:10px;
+    width:800px;
+}
+
+.blogTime{
+    position:relative;
+    top:10px;
+    left:800px;
+}
+
+.blogPage{
+    position:relative;
+    top:30px;
+    left:350px;
+
+}
